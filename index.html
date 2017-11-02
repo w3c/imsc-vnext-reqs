@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>IMSCvNEXT Requirements</title>
+  <title>IMSC1.1 Requirements</title>
   <script src='https://www.w3.org/Tools/respec/respec-w3c-common' async="" class='remove'>
 </script>
   <script class='remove'>
@@ -21,7 +21,7 @@ var respecConfig = {
     wg: "Timed Text Working Group",
     wgURI: "https://www.w3.org/AudioVideo/TT/",
     wgPublicList: "public-tt",
-    subjectPrefix: "[imsc-vnext-reqs]",
+    subjectPrefix: "[ttml-imsc1.1]",
     license: 'w3c-software-doc',
     otherLinks: [
       {
@@ -50,53 +50,50 @@ var respecConfig = {
 
 <body>
   <section id="abstract">
-    <p>This document captures technical requirements for <dfn>IMSCvNEXT</dfn>, the next revision of [[!ttml-imsc1.0.1]].</p>
+    <p>This document captures technical requirements for [[!ttml-imsc1.1]], the next revision of [[!ttml-imsc1.0.1]].</p>
   </section>
 
   <section id="sotd">
     <p>This specification is intended to be published as a Working Group Note.</p>
-  </section><!-- <section id="introduction" class='informative'> -->
-  <!-- <h2>Introduction</h2> -->
-  <!-- <p></p> -->
-  <!-- </section> -->
-
+  </section>
+  
   <section id="sect-requirements">
     <h2>Requirements</h2>
 
     <section>
       <h3>Overall</h3>
 
-      <p><a>IMSCvNEXT</a> SHALL retain the scope of [[!ttml-imsc1.0.1]] while adding the minimal set of features necessary to
+      <p>[[!ttml-imsc1.1]] SHALL retain the scope of [[!ttml-imsc1.0.1]] while adding the minimal set of features necessary to
       support current practices for worldwide subtitling and captioning delivery.</p>
     </section>
 
     <section>
       <h3>IMSC1.0.1 Compatibility</h3>
 
-      <p>A valid [[!ttml-imsc1.0.1]] Text Profile document SHALL be a valid <a>IMSCvNEXT</a> Text Profile document, and a valid
-      [[!ttml-imsc1.0.1]] Image Profile document SHALL be a valid <a>IMSCvNEXT</a> Image Profile document.</p>
+      <p>A valid [[!ttml-imsc1.0.1]] Text Profile document SHALL be a valid [[!ttml-imsc1.1]] Text Profile document, and a valid
+      [[!ttml-imsc1.0.1]] Image Profile document SHALL be a valid [[!ttml-imsc1.1]] Image Profile document.</p>
 
-      <p>A <a>IMSCvNEXT</a> presentation processor SHALL present a valid [[!ttml-imsc1.0.1]] document as it would have been
+      <p>A [[!ttml-imsc1.1]] presentation processor SHALL present a valid [[!ttml-imsc1.0.1]] document as it would have been
       presented by an [[!ttml-imsc1.0.1]] presentation processor.</p>
 
       <p>The <code>#fillLineGap</code> and <code>#activeArea</code> specified in [[!ttml-imsc1.0.1]] SHALL be
-      <code>permitted</code> in <a>IMSCvNEXT</a>.</p>
+      <code>permitted</code> in [[!ttml-imsc1.1]].</p>
     </section>
 
     <section>
       <h3>TTML2 Subset</h3>
 
-      <p>Notwithstanding deprecated syntax, as specified below, a valid <a>IMSCvNEXT</a> Document SHALL be a valid [[!TTML2]]
+      <p>Notwithstanding deprecated syntax, as specified below, a valid [[!ttml-imsc1.1]] Document SHALL be a valid [[!TTML2]]
       document.</p>
 
       <p>[[!ttml-imsc1.0.1]] syntax that is not supported in [[!TTML2]] SHALL be mapped to an equivalent [[!TTML2]] syntax and
-      deprecated in <a>IMSCvNEXT</a>.</p>
+      deprecated in [[!ttml-imsc1.1]].</p>
     </section>
 
     <section>
       <h3>HTML5 Mapping</h3>
 
-      <p><a>IMSCvNEXT</a> SHALL specify a mapping of each of its features to [[!HTML51]] documents including support for
+      <p>[[!ttml-imsc1.1]] SHALL specify a mapping of each of its features to [[!HTML51]] documents including support for
       [[!CSS-2017]].</p>
 
       <p>The fidelity of the mapping is not necessarily exact, but SHALL provide an acceptable result.</p>
@@ -105,14 +102,14 @@ var respecConfig = {
     <section>
       <h3>Image and Text Profiles</h3>
 
-      <p>While <a>IMSCvNEXT</a> defines both Image and Text Profiles, distinct Image and Text processors SHALL be defined such that
+      <p>While [[!ttml-imsc1.1]] defines both Image and Text Profiles, distinct Image and Text processors SHALL be defined such that
       an Image Processor is not required to accept Text Profile documents, and vice versa.</p>
     </section>
 
     <section>
       <h3>Japanese Text Support</h3>
 
-      <p>To support Japanese text as used in subtitles and captions, <a>IMSCvNEXT</a> Text Profile SHALL support the following
+      <p>To support Japanese text as used in subtitles and captions, [[!ttml-imsc1.1]] Text Profile SHALL support the following
       [[!TTML2]] features.</p>
 
       <table class='simple'>
@@ -181,7 +178,7 @@ var respecConfig = {
     <section>
       <h3>Stereoscopic Presentations</h3>
 
-      <p>To support stereoscopic presentations, both <a>IMSCvNEXT</a> Text and Image profiles SHALL support the
+      <p>To support stereoscopic presentations, both [[!ttml-imsc1.1]] Text and Image profiles SHALL support the
       <code>#disparity</code> feature specified in [[!TTML2]].</p>
 
       <p>References:</p>
@@ -201,7 +198,7 @@ var respecConfig = {
     <section>
       <h3>High-Dynamic Range Presentations</h3>
 
-      <p>To support HDR presentations, both <a>IMSCvNEXT</a> Text and Image profiles SHALL support the <code>#luminanceGain</code>
+      <p>To support HDR presentations, both [[!ttml-imsc1.1]] Text and Image profiles SHALL support the <code>#luminanceGain</code>
       feature specified in [[!TTML2]].</p>
 
       <p>References:</p>
@@ -217,14 +214,14 @@ var respecConfig = {
     <section>
       <h3><code>#position</code></h3>
 
-      <p>To simplify positioning, <a>IMSCvNEXT</a> Text Profile SHALL support the <code>#position</code> feature specified in
+      <p>To simplify positioning, [[!ttml-imsc1.1]] Text Profile SHALL support the <code>#position</code> feature specified in
       [[!TTML2]].</p>
     </section>
 
     <section>
       <h3><code>#initial</code></h3>
 
-      <p>To simplify style authoring, <a>IMSCvNEXT</a> Text Profile SHALL support the <code>#initial</code> feature specified in
+      <p>To simplify style authoring, [[!ttml-imsc1.1]] Text Profile SHALL support the <code>#initial</code> feature specified in
       [[!TTML2]].</p>
     </section>
   </section>
