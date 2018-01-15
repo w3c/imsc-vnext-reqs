@@ -136,51 +136,51 @@ var respecConfig = {
       <table class='simple'>
         <tbody>
           <tr>
-            <td><code>#fontKerning</code></td>
+            <th>Feature</th>
+
+            <th>Constraints</th>
           </tr>
 
           <tr>
             <td><code>#fontShear</code></td>
+
+            <td>none</td>
           </tr>
 
           <tr>
             <td><code>#ruby-non-nested</code></td>
+
+            <td><code>container</code>, <code>base</code> and <code>text</code> only</td>
           </tr>
 
           <tr>
             <td><code>#rubyAlign</code></td>
-          </tr>
 
-          <tr>
-            <td><code>#rubyOverflow</code></td>
-          </tr>
-
-          <tr>
-            <td><code>#rubyOverhang</code></td>
+            <td>Only <code>center</code> semantics are required.</td>
           </tr>
 
           <tr>
             <td><code>#rubyPosition</code></td>
+
+            <td>Only <code>outside</code> semantics are required.</td>
           </tr>
 
           <tr>
             <td><code>#rubyReserve</code></td>
+
+            <td>none</td>
           </tr>
 
           <tr>
-            <td><code>#textEmphasis</code></td>
-          </tr>
+            <td><code>#textEmphasis-minimal</code></td>
 
-          <tr>
-            <td><code>#textOrientation</code></td>
+            <td>none</td>
           </tr>
 
           <tr>
             <td><code>#textCombine</code></td>
-          </tr>
 
-          <tr>
-            <td><code>#textShadow</code></td>
+            <td>none</td>
           </tr>
         </tbody>
       </table>
@@ -191,6 +191,11 @@ var respecConfig = {
         <li>
           <a href=
           "https://lists.w3.org/Archives/Member/member-tt/2017Oct/0000.html">https://lists.w3.org/Archives/Member/member-tt/2017Oct/0000.html</a>
+        </li>
+
+        <li>
+          <a href=
+          "https://lists.w3.org/Archives/Public/public-tt/2017Nov/0007.html">https://lists.w3.org/Archives/Public/public-tt/2017Nov/0007.html</a>
         </li>
       </ul>
     </section>
@@ -244,6 +249,21 @@ var respecConfig = {
 
       <p>To simplify style authoring, [[!ttml-imsc1.1]] Text Profile SHALL support the <code>#initial</code> feature specified in
       [[!TTML2]].</p>
+    </section>
+
+    <section>
+      <h3><code>#textShadow</code></h3>
+
+      <p>To support the edge styles required by the FCC, [[!ttml-imsc1.1]] Text Profile SHALL support the <code>#textShadow</code>
+      feature specified in [[!TTML2]].</p>
+      
+      <p>References:</p>
+
+      <ul>
+        <li>
+          <a href="https://www.w3.org/AudioVideo/TT/tracker/issues/234">https://www.w3.org/AudioVideo/TT/tracker/issues/234</a>
+        </li>
+      </ul>
     </section>
   </section>
 </body>
