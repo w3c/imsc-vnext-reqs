@@ -57,6 +57,12 @@ var respecConfig = {
     <p>This specification is intended to be published as a Working Group Note.</p>
   </section>
 
+  <section id="sect-terms">
+    <h2>Terms and Definitions</h2>
+
+    <p><dfn>Deprecated</dfn>. Permitted today, but expected to be prohibited in the future.</p>
+  </section>
+
   <section id="sect-requirements">
     <h2>Requirements</h2>
 
@@ -76,18 +82,32 @@ var respecConfig = {
       <p>A [[!ttml-imsc1.1]] presentation processor SHALL present a valid [[!ttml-imsc1.0.1]] document as it would have been
       presented by an [[!ttml-imsc1.0.1]] presentation processor.</p>
 
-      <p>The <code>#fillLineGap</code> and <code>#activeArea</code> specified in [[!ttml-imsc1.0.1]] SHALL be
-      <code>permitted</code> in [[!ttml-imsc1.1]].</p>
+      <p>The <code>#fillLineGap</code> and <code>#activeArea</code> specified in [[!ttml-imsc1.0.1]] SHALL be permitted in
+      [[!ttml-imsc1.1]].</p>
     </section>
 
     <section>
       <h3>TTML2 Subset</h3>
 
-      <p>Notwithstanding deprecated syntax, as specified below, a valid [[!ttml-imsc1.1]] Document SHALL be a valid [[!TTML2]]
-      document.</p>
+      <p>A valid [[!ttml-imsc1.1]] Document SHALL be a valid [[!TTML2]] document.</p>
 
-      <p>[[!ttml-imsc1.0.1]] syntax that is not supported in [[!TTML2]] SHALL be mapped to an equivalent [[!TTML2]] syntax and
-      deprecated in [[!ttml-imsc1.1]].</p>
+      <p>Any [[!ttml-imsc1.0.1]] extension that (i) is not one of the following and (ii) has an equivalent feature in [[!TTML2]]
+      SHALL be <a>deprecated</a> in [[!ttml-imsc1.1]] and the corresponding [[!TTML2]] feature permitted:</p>
+
+      <ul>
+        <li><code>#activeArea</code></li>
+
+        <li><code>#fillLineGap</code></li>
+
+        <li><code>#forcedDisplay</code></li>
+
+        <li><code>#linePadding</code></li>
+
+        <li><code>#multiRowAlign</code></li>
+      </ul>
+
+      <p>When an [[!ttml-imsc1.0.1]] extension is deprecated and an equivalent [[TTML2]] feature is permitted, a document instance
+      SHALL NOT use both the deprecated extension and the equivalent [[TTML2]] feature.</p>
     </section>
 
     <section>
