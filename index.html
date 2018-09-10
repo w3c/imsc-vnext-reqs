@@ -61,9 +61,6 @@ var respecConfig = {
     <h2>Terms and Definitions</h2>
 
     <p><dfn>Deprecated</dfn>. Permitted today, but expected to be prohibited in the future.</p>
-
-    <p><dfn>At-risk</dfn>. Required, only to the extent that implementation experience can be demonstrated; otherwise not
-    required.</p>
   </section>
 
   <section id="sect-requirements">
@@ -139,66 +136,44 @@ var respecConfig = {
       <h3>Japanese Text Support</h3>
 
       <p>To support Japanese text as used in subtitles and captions, [[!ttml-imsc1.1]] Text Profile SHALL support the following
-      [[!TTML2]] features.</p>
+      features.</p>
 
       <table class='simple'>
-        <tbody>
+        <thead>
           <tr>
             <th>Feature</th>
+          </tr>
+        </thead>
 
-            <th>Constraints</th>
+        <tbody>
+          <tr>
+            <td>Ability to apply shear transformations on line areas, as a block, where a line area includes ruby base text, ruby
+            annotations, and emphasis marks.</td>
           </tr>
 
           <tr>
-            <td><code>#shear</code></td>
-
-            <td>
-              <a>at-risk</a>
-            </td>
+            <td><code>#ruby</code>, as specified in [[!TTML2]].</td>
           </tr>
 
           <tr>
-            <td><code>#lineShear</code></td>
-
-            <td>
-              <a>at-risk</a>
-            </td>
+            <td><code>#rubyAlign</code>, as specified in [[!TTML2]], where only <code>center</code> and <code>spaceAround</code>
+            semantics are required.</td>
           </tr>
 
           <tr>
-            <td><code>#ruby</code></td>
-
-            <td>none</td>
+            <td><code>#rubyPosition</code>, as specified in [[!TTML2]].</td>
           </tr>
 
           <tr>
-            <td><code>#rubyAlign</code></td>
-
-            <td>Only <code>center</code> and <code>spaceAround</code> semantics are required.</td>
+            <td><code>#rubyReserve</code>, as specified in [[!TTML2]].</td>
           </tr>
 
           <tr>
-            <td><code>#rubyPosition</code></td>
-
-            <td>none</td>
+            <td><code>#textEmphasis-minimal</code>, as specified in [[!TTML2]].</td>
           </tr>
 
           <tr>
-            <td><code>#rubyReserve</code></td>
-
-            <td>none</td>
-          </tr>
-
-          <tr>
-            <td><code>#textEmphasis-minimal</code></td>
-
-            <td>none</td>
-          </tr>
-
-          <tr>
-            <td><code>#textCombine</code></td>
-
-            <td>none</td>
+            <td><code>#textCombine</code>, as specified in [[!TTML2]].</td>
           </tr>
         </tbody>
       </table>
@@ -288,9 +263,7 @@ var respecConfig = {
       <h3><code>#length-root-container-relative</code></h3>
 
       <p>To allow straightforward sizing and length-dependent styling of fonts relative to the root container, [[!ttml-imsc1.1]]
-      Text Profile SHALL support the <code>#length-root-container-relative</code> feature specified in [[!TTML2]].</p>
-
-      <p>This requirement is <a>at-risk</a>.</p>
+      Text Profile SHOULD support the <code>#length-root-container-relative</code> feature specified in [[!TTML2]].</p>
 
       <p>References:</p>
 
